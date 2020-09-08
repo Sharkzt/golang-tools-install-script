@@ -139,6 +139,7 @@ if [ "$shell" == "fish" ]; then
         echo "set GOROOT '${GOROOT}'"
         echo "set GOPATH '$GOPATH'"
         echo 'set PATH $GOPATH/bin $GOROOT/bin $PATH'
+        echo 'set GOCACHE "/home/ec2-user/.cache/go-build"'
     } >> "$shell_profile"
 else
     {
@@ -147,6 +148,7 @@ else
         echo 'export PATH=$GOROOT/bin:$PATH'
         echo "export GOPATH=$GOPATH"
         echo 'export PATH=$GOPATH/bin:$PATH'
+        echo 'export GOCACHE="/home/ec2-user/.cache/go-build"'
     } >> "$shell_profile"
 fi
 
